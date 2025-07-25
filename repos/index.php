@@ -27,6 +27,13 @@
         return false;
       }
 
+      // Basic SQL Injection patterns detection (case-insensitive)
+      const sqlInjectionPattern = /(--|;|\/\*|\*\/)/;
+      if (sqlInjectionPattern.test(input)) {
+        alert('SQL Injection attempt detected. Please enter a valid search term.');
+        return false;
+      }
+
       return true;
     }
 
