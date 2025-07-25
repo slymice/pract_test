@@ -18,7 +18,13 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       ...pluginReact.configs.flat.recommended.rules,
-      "security/detect-eval-with-expression": "error"
+      "security/detect-eval-with-expression": "error",
+      "security/detect-unsafe-regex": "warn",
+      "security/detect-non-literal-fs-filename": "warn",
+      "security/detect-non-literal-regexp": "warn",
+      "security/detect-pseudoRandomBytes": "warn",
+      "security/detect-child-process": "warn",
+
     }
   }
 ];
